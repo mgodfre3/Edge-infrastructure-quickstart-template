@@ -21,7 +21,7 @@ resource "azurerm_role_assignment" "ServicePrincipalRoleAssign" {
 #module "serverRoleBindings" {
  # for_each = {
   #  for index, server in var.servers :
-  #  server.name => server.ipv4Address
+   # server.name => server.ipv4Address
   #}
   #source         = "./server-rolebindings"
   #resourceGroup  = var.resourceGroup
