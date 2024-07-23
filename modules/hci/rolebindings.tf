@@ -18,13 +18,13 @@ resource "azurerm_role_assignment" "ServicePrincipalRoleAssign" {
   principal_id         = var.rpServicePrincipalObjectId == "" ? data.azuread_service_principal.hciRp[0].object_id : var.rpServicePrincipalObjectId
 }
 
-#module "serverRoleBindings" {
- # for_each = {
-  #  for index, server in var.servers :
-   # server.name => server.ipv4Address
-  #}
-  #source         = "./server-rolebindings"
-  #resourceGroup  = var.resourceGroup
-  #serverName     = each.key
-  #subscriptionId = var.subscriptionId
+module "serverRoleBindings" {
+  for_each = {
+    for index, server in var.servers :
+    server.name => server.ipv4Address
+  }
+  source         = "./server-rolebindings"
+  resourceGroup  = var.resourceGroup
+  serverName     = each.key
+  subscriptionId = var.subscriptionId
 #}
