@@ -25,7 +25,7 @@
      {
        name               = "Storage1Network",
        networkAdapterName = "Port0",
-       vlanId             = "712"
+       vlanId             = "711"
      },
      {
        name               = "Storage2Network",
