@@ -1,7 +1,7 @@
  module "base" {
    source          = "../../modules/base"
    location        = "eastus"
-   siteId          = "California"
+   siteId          = "Califor"
    domainFqdn      = "adaptivecloudlab.com"
    startingAddress = "172.22.85.10"
    endingAddress   = "172.22.85.19"
