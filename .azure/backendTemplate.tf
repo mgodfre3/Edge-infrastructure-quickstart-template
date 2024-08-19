@@ -1,8 +1,10 @@
 terraform {
   backend "azurerm" {
-    resource_group_name  = "AdaptiveCloud-IaC"
-    storage_account_name = "adaptivecloudiac"
-    container_name       = "ac-iac"
+    resource_group_name  = "AdaptiveCloud-GitHub"
+    storage_account_name = "aciacblob"
+    container_name       = "iac"
     key                  = "{{.GroupName}}.tfstate"
+    use_azuread_auth     = true
+    subscription_id      = "fbaf508b-cb61-4383-9cda-a42bfa0c7bc9"
   }
 }
