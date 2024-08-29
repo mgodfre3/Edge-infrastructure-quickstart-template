@@ -1,7 +1,7 @@
  module "base" {
    source          = "../../modules/base"
    location        = "eastus"
-   siteId          = "Califor"
+   siteId          = "Cali-WH"
    domainFqdn      = "adaptivecloudlab.com"
    startingAddress = "172.22.85.10"
    endingAddress   = "172.22.85.19"
@@ -17,7 +17,7 @@
      },
      {
        name        = "CA-Node2",
-       ipv4Address = "172.22.85.23"
+       ipv4Address = "172.22.85.24"
      }
    ]
    managementAdapters = ["Port3", "Port4"]
