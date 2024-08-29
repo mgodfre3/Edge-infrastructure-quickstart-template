@@ -51,9 +51,15 @@ jobs:
             working-directory: qa/Colorado
         secrets: inherit
         needs: [qa]
+    Denver:
+        uses: ./.github/workflows/site-cd-workflow.yml
+        with:
+            working-directory: qa/Denver
+        secrets: inherit
+        needs: [qa]
     prod:
         name: prod
-        needs: [qa,California,Colorado]
+        needs: [qa,California,Colorado,Denver]
         runs-on: ubuntu-latest
         steps:
          - run: echo "running prod stage"
